@@ -1,0 +1,30 @@
+{
+  "pages": [
+    "pages/my/my",
+    "pages/my/detail/detail",
+    "pages/my/about/about",
+    "pages/my/record/record",
+    "pages/home/home",
+    "pages/tag/tag"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/my/my"
+      },
+      {
+        "pagePath": "pages/home/home"
+      },
+      {
+        "pagePath": "pages/tag/tag"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

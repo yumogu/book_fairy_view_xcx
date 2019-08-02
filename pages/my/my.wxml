@@ -1,0 +1,17 @@
+<!-- my.wxml -->
+<view class="my-index">
+  <view class="my-img-name right-arrow flex" bind:tap="goFn" data-url="./detail/detail">
+    <view class="image-contain">
+      <image style="width: 60px; height: 60px;" src="{{userInfo.avatarUrl}}" />
+    </view>
+    <button class="my-button" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">{{!userInfo.nickName ? '登录' :  userInfo.nickName}}</button>
+    <!-- <view  wx:else class="username">{{userInfo.nickName}}</view> -->
+  </view>
+  <view class="border-bottom right-arrow my-cell" bind:tap="goFn" data-url="./record/record">
+    阅读记录
+  </view>
+  <view class="border-bottom right-arrow my-cell" bind:tap="goFn" data-url="./about/about">
+    关于我们
+  </view>
+</view>
+<tab-bar myFlag="{{true}}"></tab-bar>

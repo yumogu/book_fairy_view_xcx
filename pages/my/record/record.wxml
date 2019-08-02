@@ -1,0 +1,21 @@
+<!-- record.wxml -->
+<view class="my-record">
+  <view bind:tap="back" class="back"></view>
+  <view class="my-record">
+  </view>
+  <view class="flex record-userinfo">
+    <view class="record-userinfo-img">
+      <image class="record-userinfo-image" style="width: 60px; height: 60px;" src="{{userInfo.avatarUrl}}" />
+    </view>
+    <text>{{userInfo.nickName}}</text>
+  </view>
+  <view class="my-record-title">阅读记录</view>
+  <scroll-view class="flex my-record-list" scroll-y style="height: 480px;" bindscrolltoupper="upper" bindscrolltolower="lower"  enable-flex="true">
+    <view wx:for="{{bookList}}" wx:for-index="idx" wx:for-item="item" wx:key="idx" class="my-record-list-item">
+      <view class="my-record-list-item-view">
+        <image class="my-record-list-item-view-image" style="width: 90px; height: 115px;" src="{{item.bookImgUrl}}" />
+      </view>
+      <view class="my-record-list-item-text">{{item.bookName}}</view>
+    </view>
+  </scroll-view>
+</view>

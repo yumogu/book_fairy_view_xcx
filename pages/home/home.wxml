@@ -1,0 +1,3 @@
+<!-- home.wxml -->
+<view>home</view>
+<tab-bar homeFlag="{{true}}"></tab-bar>

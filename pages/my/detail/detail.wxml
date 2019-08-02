@@ -1,0 +1,15 @@
+<!--detail.wxml -->
+<view class="my-detail">
+  <view class="border-bottom flex detail-cell detail-cell-img">
+    <view>我的头像</view>
+    <view><image style="width: 60px; height: 60px;" src="{{userInfo.avatarUrl}}" /></view>
+  </view>
+  <view class="border-bottom flex detail-cell">
+    <view>我的性别</view>
+    <view>{{userInfo.gender === 0 ? '未知' : userInfo.gender === 1 ? '男' : '女'}}</view>
+  </view>
+  <view class="border-bottom flex detail-cell">
+    <view>我的籍贯</view>
+    <view>{{userInfo.city}}</view>
+  </view>
+</view >

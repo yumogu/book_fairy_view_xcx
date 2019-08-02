@@ -1,0 +1,3 @@
+<!-- tag.wxml -->
+<view>tag</view>
+<tab-bar tagFlag="{{true}}"></tab-bar>

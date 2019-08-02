@@ -1,0 +1,18 @@
+.my-about {
+  margin: 60rpx auto 0;
+  width: 658rpx;
+  height: 96rpx;
+  font-size: 28rpx;
+  font-weight: 300;
+  color: rgba(74,74,74,1);
+  line-height: 48rpx;
+}
+.disclaimer {
+  margin: 28rpx 0 16rpx 0;
+  width: 144rpx;
+  height: 50rpx;
+  font-size: 36rpx;
+  font-weight: 600;
+  color: rgba(74,74,74,1);
+  line-height: 50rpx;
+}

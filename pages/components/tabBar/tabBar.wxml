@@ -1,0 +1,14 @@
+<!-- tabBar.wxml -->
+<view class="tabBar-component">
+  <view class="flex border-top">
+    <view class="flex-td" id="home" bindtap="tabClick">
+      <image class="img" style="width: 23px; height: 19px; display: block;" src="{{homeSrc}}"></image>
+    </view>
+    <view class="flex-td" id="tag" bindtap="tabClick">
+      <image class="img" style="width: 19px; height: 19px; display: block;" src="{{tagSrc}}"></image>
+    </view>
+    <view class="flex-td" id="my" bindtap="tabClick">
+      <image class="img" style="width: 19px; height: 21px; display: block;" src="{{mySrc}}"></image>
+    </view>
+  </view>
+</view>

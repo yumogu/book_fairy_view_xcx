@@ -1,0 +1,21 @@
+/**detail.wxss**/
+@import '../../../lib/public.wxss';
+.my-detail {
+  padding-top: 42rpx;
+}
+.detail-cell {
+  margin: 0 auto;
+  width: 592rpx;
+  height: 114rpx;
+  line-height: 114rpx; 
+  font-size: 32rpx;
+  font-weight: 300;
+  color: rgba(74,74,74,1);
+}
+.flex {
+  justify-content: space-between;
+}
+.detail-cell-img {
+  height: 130rpx;
+  line-height: 130rpx;
+}

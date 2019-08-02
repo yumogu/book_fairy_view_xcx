@@ -1,0 +1,78 @@
+/* record.wxss */
+@import '../../../lib/public.wxss';
+.my-record {
+  width: 100%;
+  height: 464rpx;
+  background: url('https://ae01.alicdn.com/kf/H70bd48f9f9ad4742b92ed70510d2e3f98.png') no-repeat;
+  background-size: 100% 100%;
+  
+}
+.back {
+  position: fixed;
+  top: 40rpx;
+  width: 48rpx;
+  height: 108rpx;
+  left: 48rpx;
+}
+.back:after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  right: 40rpx;
+  width: 16rpx;
+  height: 16rpx;
+  border-top: 2rpx solid #ffffff;
+  border-left: 2rpx solid #ffffff;
+  -webkit-transform: translateY(-50%) rotate(-45deg);
+  -ms-transform: translateY(-50%) rotate(-45deg);
+  transform: translateY(-50%) rotate(-45deg);
+}
+.flex {
+  justify-content: left;
+}
+.record-userinfo {
+  margin-top: -60rpx;
+  padding-left: 58rpx;
+  font-size: 40rpx;
+  font-weight: 600;
+  color: rgba(74,74,74,1);
+  line-height: 120rpx;
+}
+.record-userinfo-img {
+  margin-right: 14rpx;
+  border-radius: 50%;
+}
+.record-userinfo-image {
+  border-radius: 50%;
+}
+.my-record-list.flex {
+  flex-wrap: wrap;
+}
+.my-record-list {
+  padding: 40rpx;
+}
+.my-record-list-item {
+  margin-right: 64rpx;
+  font-size: 24rpx;
+  font-weight: 400;
+  color:rrgba(74,74,74,1);
+  
+}
+.my-record-list-item-text {
+  line-height: 34rpx;
+  padding-top: 22rpx;
+  padding-bottom: 40rpx;
+}
+.my-record-list-item:nth-child(3n) {
+  margin-right: 0;
+}
+.my-record-title {
+  height: 56rpx;
+  font-size: 40rpx;
+  font-weight: 600;
+  color: rgba(74,74,74,1);
+  line-height: 56rpx;
+  margin-top: 46rpx;
+  margin-bottom: 40rpx;
+  margin-left: 38rpx;
+}

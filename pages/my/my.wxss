@@ -1,0 +1,50 @@
+/**my.wxss**/
+@import '../../lib/public.wxss';
+.my-img-name {
+  width: 678rpx;
+  height: 222rpx;
+  background: rgba(255,255,255,1);
+  box-shadow: 0 4rpx 8rpx 0 rgba(242,241,241,1);
+  border-radius: 10rpx;
+  margin: 22rpx auto 18rpx;
+}
+.flex {
+  justify-content: left;
+}
+.image-contain {
+  width: 120rpx;
+  height: 120rpx;
+  margin: 50rpx 44rpx 52rpx 34rpx;
+}
+.username {
+  height: 56rpx;
+  font-size: 40rpx;
+  font-weight: 600;
+  color: rgba(74,74,74,1);
+  line-height: 56rpx;
+}
+.my-cell {
+  margin: 0 auto;
+  width: 592rpx;
+  height: 114rpx;
+  font-size: 32rpx; 
+  font-weight: 300;
+  color: rgba(74,74,74,1);
+  line-height: 114rpx;
+}
+.my-button:after {
+  border: none;
+  border-radius: 0;
+}
+.my-button {
+  background-color: #ffffff;
+  height: 56rpx;
+  font-size: 40rpx;
+  font-weight: 600;
+  color: rgba(74,74,74,1);
+  line-height: 56rpx;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+}
+
