@@ -1,0 +1,12 @@
+<!-- home.wxml -->
+<view class="view-page">
+  <view class="flex article-info">
+    <view>{{bookDetail.bookName}}</view>
+    <!-- <view>{{bookDetail.author}}</view> -->
+  </view>
+  <view class="article-content">1111111111111</view>
+  <view class="flex article-info  article-info-bottom">
+    <view>{{bookDetail.chapterName}}</view>
+    <view>{{bookDetail.progress + '/' +bookDetail.total}}</view>
+  </view>
+</view>

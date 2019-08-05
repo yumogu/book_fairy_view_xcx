@@ -1,1 +1,84 @@
-/**my.wxss**/
+/**home.wxss**/
+@import '../../lib/public.wxss';
+.home > .flex, .home-right-view > .flex {
+  justify-content: left;
+}
+.home {
+  padding-bottom: 120rpx;
+}
+.home-content {
+  width: 670rpx;
+  height: 200rpx;
+  background:rgba(255,255,255,1);
+  box-shadow: 0 8rpx 20rpx 0 rgba(242,241,241,1);
+  border-radius: 10rpx;
+  margin: 100rpx auto 0;
+}
+.home-left-img {
+  width: 220rpx;
+  height: 280rpx;
+  border-radius: 10rpx;
+  margin-top: -80rpx;
+}
+.home-right-view {
+  height: 200rpx;
+  padding-left: 28rpx;
+  width: 450rpx;
+  position: relative;
+}
+.home-right-view > .flex {
+  margin-top: 18rpx;
+  justify-content: space-between;
+  padding-right: 40rpx;
+}
+.home-book-title {
+  height: 50rpx;
+  font-size: 36rpx;
+  font-weight: 600;
+  color: rgba(74,74,74,1);
+  line-height: 50rpx;
+  margin-top: 20rpx;
+}
+.home-book-desc {
+  height: 34rpx;
+  font-size: 24rpx;
+  font-weight: 600;
+  color: rgba(152,152,152,1);
+  line-height: 34rpx;
+  margin-top: 20rpx;
+}
+.home-book-size, .home-book-date {
+  height: 34rpx;
+  font-size: 24rpx;
+  font-weight: 600;
+  color: rgba(74,74,74,1);
+  line-height: 34rpx;
+}
+.updata-dot {
+  position: absolute;
+  top: 22rpx;
+  right: 22rpx;
+  width: 20rpx;
+  height: 20rpx;
+  background: rgba(132,177,237,1);
+  border-radius: 15rpx;
+}
+.progress {
+  width: 450rpx; 
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.sub-title {
+  width: 100%;
+  height: 34rpx;
+  font-size: 24rpx;
+  font-weight: 400;
+  color: rgba(74,74,74,1);
+  line-height: 34rpx;
+  text-align: right;
+  padding-right: 38rpx;
+}
+.sub-title-view {
+  margin-right: 38rpx;
+}

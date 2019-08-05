@@ -43,23 +43,27 @@ Page({
       })
     }
   },
-  getUserInfo: function(e) {
-    console.log('getUserInfo', e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
-    })
+  getUserInfo: function (e) {
+    if (e.detail.userInfo) {
+      app.globalData.userInfo = e.detail.userInfo
+      this.setData({
+        userInfo: e.detail.userInfo,
+        hasUserInfo: true
+      })
+    }
   },
-  // onGotUserInfo: function(e) {
-  //   console.log(e)
-  // },
   goFn: function (e) {
-    if (app.globalData.userInfo) {
+    console.log('goFn', e.currentTarget.dataset.url)
+    if (app.globalData.userInfo || e.currentTarget.dataset.url.indexOf('/about/about') > -1) {
       wx.navigateTo({
         url: e.currentTarget.dataset.url
       })
     } else {
+      wx.showToast({
+        title: '请先登陆',
+        icon: 'none',
+        duration: 2000
+      })
       // alert('请先登陆')
     }
     

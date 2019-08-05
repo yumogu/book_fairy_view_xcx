@@ -1,0 +1,26 @@
+/**home.wxss**/
+@import '../../lib/public.wxss';
+.view-page {
+  width: 100%;
+  padding-top: 50rpx;
+}
+.article-info {
+  margin: 0 auto;
+  width: 90%;
+  height: 34rpx;
+  font-size: 24rpx;
+  font-weight: 600;
+  color: rgba(153,153,153,1);
+  line-height: 34rpx;
+  justify-content: space-between;
+}
+.article-content {
+  height: 95%;
+}
+.article-info-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  width: 90%;
+  height: 34rpx;
+}

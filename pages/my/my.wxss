@@ -37,14 +37,15 @@
   border-radius: 0;
 }
 .my-button {
+  width: 678rpx;
+  height: 222rpx;
+  background: rgba(255,255,255,1);
+  box-shadow: 0 4rpx 8rpx 0 rgba(242,241,241,1);
+  border-radius: 10rpx;
+  margin: 22rpx auto 18rpx;
   background-color: #ffffff;
-  height: 56rpx;
   font-size: 40rpx;
   font-weight: 600;
   color: rgba(74,74,74,1);
-  line-height: 56rpx;
-  margin-left: 0;
-  margin-right: 0;
-  padding-left: 0;
 }
 

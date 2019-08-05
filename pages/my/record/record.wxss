@@ -72,7 +72,7 @@
   font-weight: 600;
   color: rgba(74,74,74,1);
   line-height: 56rpx;
-  margin-top: 46rpx;
-  margin-bottom: 40rpx;
+  margin-top: 26rpx;
+  margin-bottom: 20rpx;
   margin-left: 38rpx;
 }

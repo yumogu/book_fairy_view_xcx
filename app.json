@@ -1,10 +1,11 @@
 {
   "pages": [
-    "pages/my/my",
+    "pages/viewPage/viewPage",
+    "pages/home/home",
     "pages/my/detail/detail",
     "pages/my/about/about",
     "pages/my/record/record",
-    "pages/home/home",
+    "pages/my/my",
     "pages/tag/tag"
   ],
   "window": {

@@ -1,3 +1,22 @@
 <!-- home.wxml -->
-<view>home</view>
+<view class="home">
+  <view class="sub-title">
+    <view  class="sub-title-view">书中有仙，一醉千年</view>
+  </view>
+  <view wx:for="i in 10" class="flex home-content" bind:tap="toBook">
+    <view class="home-left-img">
+      <image style="width: 220rpx; height: 280rpx" src="https://ae01.alicdn.com/kf/Hf9e19244c1ad4225a0bc479bd0a64d945.png"></image>
+    </view>
+    <view class="home-right-view">
+      <view class="updata-dot"></view>
+      <view class="home-book-title">追风筝的人</view>
+      <view class="home-book-desc">第一章哈哈哈哈</view>
+      <view class="flex">
+        <view class="home-book-size">13.5M</view>
+        <view class="home-book-date">2018.10.19</view>
+      </view>
+      <progress class="progress"  stroke-width="4rpx"  border-radius="2px" percent="0" color="#84B1ED"  backgroundColor="#ffffff" />
+    </view>
+  </view>
+</view>
 <tab-bar homeFlag="{{true}}"></tab-bar>

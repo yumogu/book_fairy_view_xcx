@@ -1,11 +1,16 @@
 <!-- my.wxml -->
 <view class="my-index">
-  <view class="my-img-name right-arrow flex" bind:tap="goFn" data-url="./detail/detail">
+  <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" class="my-button flex" bindgetuserinfo="getUserInfo">
+    <view class="image-contain">
+      <image style="width: 60px; height: 60px;" src="https://ae01.alicdn.com/kf/Hf9e19244c1ad4225a0bc479bd0a64d945.png" />
+    </view>
+    <view class="username">登录</view>
+  </button>
+  <view wx:else class="my-img-name right-arrow flex" bind:tap="goFn" data-url="./detail/detail">
     <view class="image-contain">
       <image style="width: 60px; height: 60px;" src="{{userInfo.avatarUrl}}" />
     </view>
-    <button class="my-button" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">{{!userInfo.nickName ? '登录' :  userInfo.nickName}}</button>
-    <!-- <view  wx:else class="username">{{userInfo.nickName}}</view> -->
+    <view class="username">{{userInfo.nickName}}</view>
   </view>
   <view class="border-bottom right-arrow my-cell" bind:tap="goFn" data-url="./record/record">
     阅读记录

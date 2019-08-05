@@ -9,6 +9,16 @@ Page({
     myFlag: true
   },
   onReady: function(options) {
+    wx.setNavigationBarTitle({
+      title: '书仙'
+    })
     wx.hideTabBar()
+  },
+  toBook: function () {
+    wx.navigateTo({
+      url: '../viewPage/viewPage',
+      success: function (res) {
+      }
+    })
   }
 })
