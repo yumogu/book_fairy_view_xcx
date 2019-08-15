@@ -5,7 +5,7 @@
   </view>
   <view wx:for="i in 10" class="flex home-content" bind:tap="toBook">
     <view class="home-left-img">
-      <image style="width: 220rpx; height: 280rpx" src="https://ae01.alicdn.com/kf/Hf9e19244c1ad4225a0bc479bd0a64d945.png"></image>
+      <image style="width: 220rpx; height: 280rpx" src="https://ae01.alicdn.com/kf/He8394015d77944f19d085f9062711172U.png"></image>
     </view>
     <view class="home-right-view">
       <view class="updata-dot"></view>

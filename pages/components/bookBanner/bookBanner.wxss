@@ -1,0 +1,20 @@
+/**bookBanner.wxss**/
+@import '../../../lib/public.wxss';
+.book-banner-component {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 92rpx;
+  background: #ffffff;
+}
+.book-banner-component > .flex, .book-banner-component > .flex > .flex-td {
+  height: 100%;
+  position: relative;
+}
+.book-banner-component > .flex > .flex-td > .img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

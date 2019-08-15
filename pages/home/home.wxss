@@ -5,6 +5,7 @@
 }
 .home {
   padding-bottom: 120rpx;
+  overflow-x: hidden;
 }
 .home-content {
   width: 670rpx;

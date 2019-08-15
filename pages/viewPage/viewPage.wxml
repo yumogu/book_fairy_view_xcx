@@ -1,12 +1,22 @@
 <!-- home.wxml -->
 <view class="view-page">
-  <view class="flex article-info">
+  <!-- <view class="flex article-info">
     <view>{{bookDetail.bookName}}</view>
-    <!-- <view>{{bookDetail.author}}</view> -->
-  </view>
-  <view class="article-content">1111111111111</view>
+  </view> -->
+  <scroll-view scroll-y class="article-content">
+    <view class="" style="font-size:{{fontSize}}px;line-height:{{fontSize*2}}px;">{{text}}</view>
+    <view class="change-chapter flex">
+      <view class="last-chapter">上一章</view>
+      <view class="next-chapter">下一章</view>
+    </view>
+  </scroll-view>
   <view class="flex article-info  article-info-bottom">
     <view>{{bookDetail.chapterName}}</view>
     <view>{{bookDetail.progress + '/' +bookDetail.total}}</view>
   </view>
+  <view  class="flex setting-font-size ">
+    <view class="sub-fontsize" bind:tap="subFontSize">A-</view>
+    <view class="add-fontsize"  bind:tap="addFontSize">A+</view>
+  </view>
+  <book-banner class="hide"></book-banner>
 </view>

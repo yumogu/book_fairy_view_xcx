@@ -1,11 +1,15 @@
 /* record.wxss */
 @import '../../../lib/public.wxss';
+.my-record-content {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
 .my-record {
   width: 100%;
   height: 464rpx;
   background: url('https://ae01.alicdn.com/kf/H70bd48f9f9ad4742b92ed70510d2e3f98.png') no-repeat;
   background-size: 100% 100%;
-  
 }
 .back {
   position: fixed;

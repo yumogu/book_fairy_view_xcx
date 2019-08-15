@@ -9,82 +9,82 @@ Page({
       {
         bookName: '追风筝的人',
         bookImgUrl:
-          'https://ae01.alicdn.com/kf/Hf115f27b2c344099ba643d7bb2f985eai.png'
+          'https://ae01.alicdn.com/kf/He8394015d77944f19d085f9062711172U.png'
       },
       {
         bookName: 'c测试',
         bookImgUrl:
-          'https://ae01.alicdn.com/kf/Hf115f27b2c344099ba643d7bb2f985eai.png'
+          'https://ae01.alicdn.com/kf/He8394015d77944f19d085f9062711172U.png'
       },
       {
         bookName: '侧测试',
         bookImgUrl:
-          'https://ae01.alicdn.com/kf/Hf115f27b2c344099ba643d7bb2f985eai.png'
+          'https://ae01.alicdn.com/kf/He8394015d77944f19d085f9062711172U.png'
       },
       {
         bookName: '侧测试',
         bookImgUrl:
-          'https://ae01.alicdn.com/kf/Hf115f27b2c344099ba643d7bb2f985eai.png'
+          'https://ae01.alicdn.com/kf/He8394015d77944f19d085f9062711172U.png'
       },
       {
         bookName: '侧测试',
         bookImgUrl:
-          'https://ae01.alicdn.com/kf/Hf115f27b2c344099ba643d7bb2f985eai.png'
+          'https://ae01.alicdn.com/kf/He8394015d77944f19d085f9062711172U.png'
       },
       {
         bookName: '侧测试',
         bookImgUrl:
-          'https://ae01.alicdn.com/kf/Hf115f27b2c344099ba643d7bb2f985eai.png'
+          'https://ae01.alicdn.com/kf/He8394015d77944f19d085f9062711172U.png'
       },
       {
         bookName: '侧测试',
         bookImgUrl:
-          'https://ae01.alicdn.com/kf/Hf115f27b2c344099ba643d7bb2f985eai.png'
+          'https://ae01.alicdn.com/kf/He8394015d77944f19d085f9062711172U.png'
       },
       {
         bookName: '侧测试',
         bookImgUrl:
-          'https://ae01.alicdn.com/kf/Hf115f27b2c344099ba643d7bb2f985eai.png'
+          'https://ae01.alicdn.com/kf/He8394015d77944f19d085f9062711172U.png'
       },
       {
         bookName: '侧测试',
         bookImgUrl:
-          'https://ae01.alicdn.com/kf/Hf115f27b2c344099ba643d7bb2f985eai.png'
+          'https://ae01.alicdn.com/kf/He8394015d77944f19d085f9062711172U.png'
       },
       {
         bookName: '侧测试',
         bookImgUrl:
-          'https://ae01.alicdn.com/kf/Hf115f27b2c344099ba643d7bb2f985eai.png'
+          'https://ae01.alicdn.com/kf/He8394015d77944f19d085f9062711172U.png'
       },
       {
         bookName: '侧测试',
         bookImgUrl:
-          'https://ae01.alicdn.com/kf/Hf115f27b2c344099ba643d7bb2f985eai.png'
+          'https://ae01.alicdn.com/kf/He8394015d77944f19d085f9062711172U.png'
       },
       {
         bookName: '侧测试',
         bookImgUrl:
-          'https://ae01.alicdn.com/kf/Hf115f27b2c344099ba643d7bb2f985eai.png'
+          'https://ae01.alicdn.com/kf/He8394015d77944f19d085f9062711172U.png'
       },
       {
         bookName: '侧测试',
         bookImgUrl:
-          'https://ae01.alicdn.com/kf/Hf115f27b2c344099ba643d7bb2f985eai.png'
+          'https://ae01.alicdn.com/kf/He8394015d77944f19d085f9062711172U.png'
       },
       {
         bookName: '侧测试',
         bookImgUrl:
-          'https://ae01.alicdn.com/kf/Hf115f27b2c344099ba643d7bb2f985eai.png'
+          'https://ae01.alicdn.com/kf/He8394015d77944f19d085f9062711172U.png'
       },
       {
         bookName: '侧测试',
         bookImgUrl:
-          'https://ae01.alicdn.com/kf/Hf115f27b2c344099ba643d7bb2f985eai.png'
+          'https://ae01.alicdn.com/kf/He8394015d77944f19d085f9062711172U.png'
       },
       {
         bookName: '侧测试',
         bookImgUrl:
-          'https://ae01.alicdn.com/kf/Hf115f27b2c344099ba643d7bb2f985eai.png'
+          'https://ae01.alicdn.com/kf/He8394015d77944f19d085f9062711172U.png'
       }
     ]
   },

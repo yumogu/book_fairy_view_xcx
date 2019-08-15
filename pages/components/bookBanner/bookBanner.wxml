@@ -1,0 +1,11 @@
+<!-- bookBanner.wxml -->
+<view class="book-banner-component">
+  <view class="flex border-top">
+    <view class="flex-td">
+      <image class="img" style="width: 44rpx; height: 36rpx; display: block;" src="../../../images/catalog-icon.png"></image>
+    </view>
+    <view class="flex-td">
+      <image class="img" style="width: 36rpx; height: 40rpx; display: block;" src="../../../images/base-setting.png"></image>
+    </view>
+  </view>
+</view>

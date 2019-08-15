@@ -1,8 +1,7 @@
 <!-- record.wxml -->
-<view class="my-record">
+<view class="my-record-content">
   <view bind:tap="back" class="back"></view>
-  <view class="my-record">
-  </view>
+  <view class="my-record"></view>
   <view class="flex record-userinfo">
     <view class="record-userinfo-img">
       <image class="record-userinfo-image" style="width: 60px; height: 60px;" src="{{userInfo.avatarUrl}}" />
