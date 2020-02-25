@@ -1,1 +1,37 @@
-/**my.wxss**/
+/**tag.wxss**/
+@import '../../lib/public.wxss';
+.flex {
+  justify-content: left;
+}
+.book-type-tag {
+  overflow-x: auto;
+  padding-left: 40rpx;
+  height: 80rpx;
+  align-item: center;
+}
+.book-type-tag::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    color: transparent;
+}
+.book-type-tag-item {
+  width: 120rpx;
+  height: 48rpx;
+  text-align: center;
+  line-height: 48rpx;
+  font-size: 24rpx;
+  font-weight:300;
+  color:rgba(74,74,74,1);
+  flex-shrink: 0;
+  background: rgba(255,255,255,1);
+  box-shadow: 0rpx 4rpx 16rpx 0rpx rgba(200,200,200,0.5);
+  border-radius:24rpx;
+  margin-right: 28rpx;
+}
+.selected { 
+  background: rgba(132,177,237,1);
+  box-shadow: 0rpx 4rpx 16rpx 0rpx rgba(200,200,200,0.5);
+  border-radius: 24rpx;
+  font-weight: 600;
+  color: rgba(253,253,253,1);
+}

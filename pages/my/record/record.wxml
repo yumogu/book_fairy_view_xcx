@@ -9,12 +9,12 @@
     <text>{{userInfo.nickName}}</text>
   </view>
   <view class="my-record-title">阅读记录</view>
-  <scroll-view class="flex my-record-list" scroll-y style="height: 430px;" bindscrolltoupper="upper" bindscrolltolower="lower"  enable-flex="true">
-    <view wx:for="{{bookList}}" wx:for-index="idx" wx:for-item="item" wx:key="idx" class="my-record-list-item">
-      <view class="my-record-list-item-view">
-        <image class="my-record-list-item-view-image" style="width: 90px; height: 115px;" src="{{item.bookImgUrl}}" />
+  <scroll-view class="flex book-list" scroll-y style="height: 430px;" bindscrolltoupper="upper" bindscrolltolower="lower"  enable-flex="true">
+    <view wx:for="{{bookList}}" wx:for-index="idx" wx:for-item="item" wx:key="idx" class="book-list-item">
+      <view class="book-list-item-view">
+        <image class="book-list-item-view-image" style="width: 90px; height: 115px;" src="{{item.bookImgUrl}}" />
       </view>
-      <view class="my-record-list-item-text">{{item.bookName}}</view>
+      <view class="book-list-item-text">{{item.bookName}}</view>
     </view>
   </scroll-view>
 </view>

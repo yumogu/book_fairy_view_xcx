@@ -1,13 +1,13 @@
 {
   "pages": [
+    "pages/tag/tag",
     "pages/home/home",
     "pages/viewPage/viewPage",
     
     "pages/my/detail/detail",
     "pages/my/about/about",
     "pages/my/record/record",
-    "pages/my/my",
-    "pages/tag/tag"
+    "pages/my/my"
   ],
   "window": {
     "backgroundTextStyle": "light",

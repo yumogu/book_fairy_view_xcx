@@ -1,3 +1,41 @@
 <!-- tag.wxml -->
-<view>tag</view>
+<view>
+  <view>
+    <view>书库</view>
+    <view>书库</view>
+  </view>
+  <view class="book-type-tag flex">
+    <view class="book-type-tag-item selected" id="1">书库1</view>
+    <view 
+      wx:for="{{typeList}}" 
+      wx:for-item="item" 
+      wx:key="index"  
+      bindtap="checkboxChange" 
+      data-value="{{item.type}}" 
+      data-index="{{index}}"  
+      class="book-type-tag-item {{item.selected ? 'selected' : ''}}"
+    >{{item.type}}</view>
+    <view class="book-type-tag-item">书库4</view>
+    <view class="book-type-tag-item">书库3</view>
+    <view class="book-type-tag-item">书库4</view>
+    <view class="book-type-tag-item">书库3</view>
+    <view class="book-type-tag-item">书库4</view>
+    <view class="book-type-tag-item">书库3</view>
+    <view class="book-type-tag-item">书库4</view>
+    <view class="book-type-tag-item">书库3</view>
+    <view class="book-type-tag-item">书库4</view>
+    <view class="book-type-tag-item">书库3</view>
+    <view class="book-type-tag-item">书库4</view>
+    <view class="book-type-tag-item">书库3</view>
+    <view class="book-type-tag-item">书库4</view>
+  </view>
+  <scroll-view class="flex book-list" scroll-y style="height: 430px;" bindscrolltoupper="upper" bindscrolltolower="lower"  enable-flex="true">
+    <view wx:for="{{bookList}}" wx:for-index="idx" wx:for-item="item" wx:key="idx" class="book-list-item">
+      <view class="book-list-item-view">
+        <image class="book-list-item-view-image" style="width: 90px; height: 115px;" src="{{item.bookImgUrl}}" />
+      </view>
+      <view class="book-list-item-text">{{item.bookName}}</view>
+    </view>
+  </scroll-view>
+</view>
 <tab-bar tagFlag="{{true}}"></tab-bar>
