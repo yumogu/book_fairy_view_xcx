@@ -1,0 +1,85 @@
+/**book-detail.wxss**/
+@import '../../lib/public.wxss';
+.home > .flex, .home-right-view > .flex {
+  justify-content: left;
+}
+.home {
+  padding-bottom: 120rpx;
+  overflow-x: hidden;
+}
+.home-content {
+  width: 670rpx;
+  height: 200rpx;
+  background:rgba(255,255,255,1);
+  box-shadow: 0 8rpx 20rpx 0 rgba(242,241,241,1);
+  border-radius: 10rpx;
+  margin: 100rpx auto 0;
+  position: relative;
+}
+.addsrc {
+  position: absolute;
+  top: -56rpx;
+  right: 26rpx;
+}
+.updatasrc {
+  position: absolute;
+  bottom: 62rpx;
+  right: 44rpx;
+}
+.home-left-img {
+  width: 220rpx;
+  height: 280rpx;
+  border-radius: 10rpx;
+  margin-top: -80rpx;
+}
+.home-right-view {
+  height: 200rpx;
+  padding-left: 28rpx;
+  width: 450rpx;
+  position: relative;
+}
+.home-right-view > .flex {
+  margin-top: 18rpx;
+  justify-content: space-between;
+  padding-right: 40rpx;
+}
+.home-book-title {
+  height: 50rpx;
+  font-size: 36rpx;
+  font-weight: 600;
+  color: rgba(74,74,74,1);
+  line-height: 50rpx;
+  margin-top: 20rpx;
+}
+.home-book-desc {
+  height: 34rpx;
+  font-size: 24rpx;
+  font-weight: 600;
+  color: rgba(152,152,152,1);
+  line-height: 34rpx;
+  margin-top: 20rpx;
+}
+.home-book-size, .home-book-date {
+  height: 34rpx;
+  font-size: 24rpx;
+  font-weight: 600;
+  color: rgba(74,74,74,1);
+  line-height: 34rpx;
+}
+.chapter-content {
+  padding: 20rpx 40rpx;
+  width: 78%;
+  height: 800rpx;
+  background: rgba(255,255,255,1);
+  box-shadow: 0rpx 8rpx 16rpx 0rpx rgba(202,202,202,0.5);
+  border-radius: 16rpx; 
+  margin: 40rpx auto; 
+  font-size: 24rpx;
+  color: #4A4A4A;
+}
+.brief-introduction {
+  font-size:28rpx;
+  font-weight: 600;
+  color: rgba(74,74,74,1);
+  // line-height: 40rpx;
+}

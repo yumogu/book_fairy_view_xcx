@@ -1,0 +1,23 @@
+<view>
+  <view class="flex home-content" bind:tap="toBook">
+    <view class="home-left-img">
+      <image style="width: 220rpx; height: 280rpx" src="https://ae01.alicdn.com/kf/He8394015d77944f19d085f9062711172U.png"></image>
+    </view>
+    <view class="home-right-view">
+      <view class="updata-dot"></view>
+      <view class="home-book-title">追风筝的人</view>
+      <view class="home-book-desc">第一章哈哈哈哈</view>
+      <view class="flex">
+        <view class="home-book-size">13.5M</view>
+        <view class="home-book-date">2018.10.19</view>
+      </view>
+      <progress class="progress"  stroke-width="4rpx"  border-radius="2px" percent="0" color="#84B1ED"  backgroundColor="#ffffff" />
+    </view>
+    <image class="addsrc" bind:tap="addsrcFn" src="{{addsrc}}" style="width: 116rpx; height: 116rpx; display: block;"></image>
+    <image class="updatasrc"  bind:tap="updatasrcFn"  src="{{updatasrc}}" style="width: 76rpx; height: 76rpx; display: block;"></image>
+  </view>
+  <view class="chapter-content">
+    <view class="brief-introduction">书籍介绍</view>
+  《撒哈拉的故事》是一系列以沙漠为背景的故事。 因为一本地理杂志的吸引，三毛背着行囊走进了荒凉单调的撒哈拉沙漠，在沙漠中寻找感受生活的真善美，书中每个故事都充溢着一种浪漫、浓情的异域情调，字里行间反映着大沙漠独有的地形地貌与风土人情。
+  </view>
+</view>

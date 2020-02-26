@@ -132,23 +132,9 @@ Page({
     }]
   },
   onLoad: function(options) {
-    wx.setNavigationBarTitle({
-      title: '书库'
-    })
-    wx.hideTabBar()
-  },
-  checkboxChange (e) {
-    console.log('checkboxChange e:',e);
-    let string = "typeList["+e.target.dataset.index+"].selected"
-    console.log('e.target.dataset.index', e.target.dataset.index)
-    console.log('this.data.typeList', this.data.typeList)
-
-    console.log('this.data.typeList[e.target.dataset.index].selected', this.data.typeList[e.target.dataset.index].selected)
-    this.setData({
-        [string]: !this.data.typeList[e.target.dataset.index].selected
-    })
-    let detailValue = this.data.typeList.filter(it => it.selected).map(it => it.type)
-    console.log('所有选中的值为：', detailValue)
+    // wx.setNavigationBarTitle({
+    //   title: '书库'
+    // })
   },
   goFn: function (e) {
     console.log('goFn', e.currentTarget.dataset.url)
@@ -165,10 +151,5 @@ Page({
       // alert('请先登陆')
     }
     
-  },
-  searchFn () {
-    wx.navigateTo({
-      url: '../search/search'
-    })
   }
 })

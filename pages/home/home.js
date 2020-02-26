@@ -14,7 +14,7 @@ Page({
     })
     wx.hideTabBar()
   },
-  toBook: function () {
+  toBook () {
     wx.navigateTo({
       url: '../viewPage/viewPage',
       success: function (res) {
