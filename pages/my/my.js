@@ -1,7 +1,7 @@
 //index.js
 //获取应用实例
 const app = getApp()
-
+var util = require('../../utils/util.js');
 Page({
   data: {
     homeFlag: false,
@@ -53,7 +53,10 @@ Page({
     }
   },
   goFn: function (e) {
-    console.log('goFn', e.currentTarget.dataset.url)
+    // util.myAjax('http://127.0.0.1:7001/api/user', {userInfo: this.data.userInfo} , 'POST', res => {
+    //   console.log(res)
+    // })
+    // console.log('goFn', e.currentTarget.dataset.url)
     if (app.globalData.userInfo || e.currentTarget.dataset.url.indexOf('/about/about') > -1) {
       wx.navigateTo({
         url: e.currentTarget.dataset.url

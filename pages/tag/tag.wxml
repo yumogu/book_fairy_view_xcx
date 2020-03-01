@@ -7,10 +7,10 @@
         wx:for-item="item" 
         wx:key="index"  
         bindtap="checkboxChange" 
-        data-value="{{item.type}}" 
+        data-value="{{item.typeStr}}" 
         data-index="{{index}}"  
         class="book-type-tag-item {{item.selected ? 'selected' : ''}}"
-      >{{item.type}}</view>
+      >{{item.typeStr}}</view>
     </view>
     <view class="search-icon" bind:tap="searchFn">
       <image src="../../images/tag-search.png" style="width: 40rpx; height: 40rpx;"></image>

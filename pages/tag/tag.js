@@ -1,7 +1,7 @@
 //tag.js
 //获取应用实例
 const app = getApp()
-
+var util = require('../../utils/util.js');
 Page({
   data: {
     homeFlag: false,
@@ -89,53 +89,67 @@ Page({
           'https://ae01.alicdn.com/kf/He8394015d77944f19d085f9062711172U.png'
       }
     ],
-    typeList: [{
-      index: 1,
-      type: '测试1',
-      selected: false
-    }, {
-      index: 2,
-      type: '测试2',
-      selected: false
-    }, {
-      index: 3,
-      type: '测试3',
-      selected: false
-    }, {
-      index: 3,
-      type: '测试3',
-      selected: false
-    }, {
-      index: 3,
-      type: '测试3',
-      selected: false
-    }, {
-      index: 3,
-      type: '测试3',
-      selected: false
-    }, {
-      index: 3,
-      type: '测试3',
-      selected: false
-    }, {
-      index: 3,
-      type: '测试3',
-      selected: false
-    }, {
-      index: 3,
-      type: '测试3',
-      selected: false
-    }, {
-      index: 3,
-      type: '测试3',
-      selected: false
-    }]
+    typeList: []
   },
   onLoad: function(options) {
     wx.setNavigationBarTitle({
       title: '书库'
     })
     wx.hideTabBar()
+    util.myAjax('http://127.0.0.1:7001/api/typeList', {} , 'POST', res => {
+      let tempObj = res.data
+      tempObj.map((v, i) => {
+        v.selected = false
+        v.typeStr = v.type_str
+        v.index = v.id
+      })
+      console.log(tempObj)
+      this.setData({
+        typeList: tempObj
+      })
+      // this.data.typeList = [{
+      //   id: 1,
+      //   type: '测试1',
+      //   selected: false
+      // }, {
+      //   id: 2,
+      //   typeStr: '测试2',
+      //   selected: false
+      // }, {
+      //   id: 3,
+      //   typeStr: '测试3',
+      //   selected: false
+      // }, {
+      //   id: 3,
+      //   typeStr: '测试3',
+      //   selected: false
+      // }, {
+      //   id: 3,
+      //   typeStr: '测试3',
+      //   selected: false
+      // }, {
+      //   id: 3,
+      //   typeStr: '测试3',
+      //   selected: false
+      // }, {
+      //   id: 3,
+      //   typeStr: '测试3',
+      //   selected: false
+      // }, {
+      //   id: 3,
+      //   type: '测试3',
+      //   selected: false
+      // }, {
+      //   id: 3,
+      //   type: '测试3',
+      //   selected: false
+      // }, {
+      //   id: 3,
+      //   type: '测试3',
+      //   selected: false
+      // }]
+      // console.log('this.data.typeList', this.data.typeList)
+    })
   },
   checkboxChange (e) {
     console.log('checkboxChange e:',e);
@@ -147,7 +161,7 @@ Page({
     this.setData({
         [string]: !this.data.typeList[e.target.dataset.index].selected
     })
-    let detailValue = this.data.typeList.filter(it => it.selected).map(it => it.type)
+    let detailValue = this.data.typeList.filter(it => it.selected).map(it => it.typeStr)
     console.log('所有选中的值为：', detailValue)
   },
   goFn: function (e) {
