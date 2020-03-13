@@ -7,87 +7,10 @@ Page({
     homeFlag: false,
     tagFlag: false,
     myFlag: true,
+    page: 1,
+    rows: 10,
+    type: 1,
     bookList: [
-      {
-        bookName: '追风筝的人',
-        bookImgUrl:
-          'https://ae01.alicdn.com/kf/He8394015d77944f19d085f9062711172U.png'
-      },
-      {
-        bookName: 'c测试',
-        bookImgUrl:
-          'https://ae01.alicdn.com/kf/He8394015d77944f19d085f9062711172U.png'
-      },
-      {
-        bookName: '侧测试',
-        bookImgUrl:
-          'https://ae01.alicdn.com/kf/He8394015d77944f19d085f9062711172U.png'
-      },
-      {
-        bookName: '侧测试',
-        bookImgUrl:
-          'https://ae01.alicdn.com/kf/He8394015d77944f19d085f9062711172U.png'
-      },
-      {
-        bookName: '侧测试',
-        bookImgUrl:
-          'https://ae01.alicdn.com/kf/He8394015d77944f19d085f9062711172U.png'
-      },
-      {
-        bookName: '侧测试',
-        bookImgUrl:
-          'https://ae01.alicdn.com/kf/He8394015d77944f19d085f9062711172U.png'
-      },
-      {
-        bookName: '侧测试',
-        bookImgUrl:
-          'https://ae01.alicdn.com/kf/He8394015d77944f19d085f9062711172U.png'
-      },
-      {
-        bookName: '侧测试',
-        bookImgUrl:
-          'https://ae01.alicdn.com/kf/He8394015d77944f19d085f9062711172U.png'
-      },
-      {
-        bookName: '侧测试',
-        bookImgUrl:
-          'https://ae01.alicdn.com/kf/He8394015d77944f19d085f9062711172U.png'
-      },
-      {
-        bookName: '侧测试',
-        bookImgUrl:
-          'https://ae01.alicdn.com/kf/He8394015d77944f19d085f9062711172U.png'
-      },
-      {
-        bookName: '侧测试',
-        bookImgUrl:
-          'https://ae01.alicdn.com/kf/He8394015d77944f19d085f9062711172U.png'
-      },
-      {
-        bookName: '侧测试',
-        bookImgUrl:
-          'https://ae01.alicdn.com/kf/He8394015d77944f19d085f9062711172U.png'
-      },
-      {
-        bookName: '侧测试',
-        bookImgUrl:
-          'https://ae01.alicdn.com/kf/He8394015d77944f19d085f9062711172U.png'
-      },
-      {
-        bookName: '侧测试',
-        bookImgUrl:
-          'https://ae01.alicdn.com/kf/He8394015d77944f19d085f9062711172U.png'
-      },
-      {
-        bookName: '侧测试',
-        bookImgUrl:
-          'https://ae01.alicdn.com/kf/He8394015d77944f19d085f9062711172U.png'
-      },
-      {
-        bookName: '侧测试',
-        bookImgUrl:
-          'https://ae01.alicdn.com/kf/He8394015d77944f19d085f9062711172U.png'
-      }
     ],
     typeList: []
   },
@@ -96,93 +19,75 @@ Page({
       title: '书库'
     })
     wx.hideTabBar()
-    util.myAjax('http://127.0.0.1:7001/api/typeList', {} , 'POST', res => {
+    util.myAjax('http://192.168.0.102:7001/api/typeList', {} , 'POST', res => {
       let tempObj = res.data
       tempObj.map((v, i) => {
         v.selected = false
         v.typeStr = v.type_str
         v.index = v.id
       })
-      console.log(tempObj)
       this.setData({
         typeList: tempObj
       })
-      // this.data.typeList = [{
-      //   id: 1,
-      //   type: '测试1',
-      //   selected: false
-      // }, {
-      //   id: 2,
-      //   typeStr: '测试2',
-      //   selected: false
-      // }, {
-      //   id: 3,
-      //   typeStr: '测试3',
-      //   selected: false
-      // }, {
-      //   id: 3,
-      //   typeStr: '测试3',
-      //   selected: false
-      // }, {
-      //   id: 3,
-      //   typeStr: '测试3',
-      //   selected: false
-      // }, {
-      //   id: 3,
-      //   typeStr: '测试3',
-      //   selected: false
-      // }, {
-      //   id: 3,
-      //   typeStr: '测试3',
-      //   selected: false
-      // }, {
-      //   id: 3,
-      //   type: '测试3',
-      //   selected: false
-      // }, {
-      //   id: 3,
-      //   type: '测试3',
-      //   selected: false
-      // }, {
-      //   id: 3,
-      //   type: '测试3',
-      //   selected: false
-      // }]
-      // console.log('this.data.typeList', this.data.typeList)
     })
+    this.getBooksListFn()
+
   },
   checkboxChange (e) {
-    console.log('checkboxChange e:',e);
     let string = "typeList["+e.target.dataset.index+"].selected"
-    console.log('e.target.dataset.index', e.target.dataset.index)
-    console.log('this.data.typeList', this.data.typeList)
-
-    console.log('this.data.typeList[e.target.dataset.index].selected', this.data.typeList[e.target.dataset.index].selected)
     this.setData({
         [string]: !this.data.typeList[e.target.dataset.index].selected
     })
     let detailValue = this.data.typeList.filter(it => it.selected).map(it => it.typeStr)
-    console.log('所有选中的值为：', detailValue)
   },
   goFn: function (e) {
-    console.log('goFn', e.currentTarget.dataset.url)
-    if (app.globalData.userInfo || e.currentTarget.dataset.url.indexOf('/about/about') > -1) {
+    console.log(e.currentTarget)
+    let query = e.currentTarget.dataset['item'];
+
+    // if (app.globalData.userInfo || e.currentTarget.dataset.url.indexOf('/about/about') > -1) {
       wx.navigateTo({
-        url: '../book-detail/book-detail'
+        url: '../book-detail/book-detail',
+        success: function(res) {
+          // 通过eventChannel向被打开页面传送数据
+          res.eventChannel.emit('bookDetailData', { data: query })
+        }
       })
-    } else {
-      wx.showToast({
-        title: '请先登陆',
-        icon: 'none',
-        duration: 2000
-      })
-      // alert('请先登陆')
-    }
+    // } else {
+    //   wx.showToast({
+    //     title: '请先登陆',
+    //     icon: 'none',
+    //     duration: 2000
+    //   })
+    // }
     
   },
   searchFn () {
     wx.navigateTo({
       url: '../search/search'
     })
-  }
+  },
+  getBooksListFn () {
+    util.myAjax('http://192.168.0.102:7001/api/booksList', {
+      page: this.data.page,
+      rows: this.data.rows,
+      type: 1
+    } , 'POST', res => {
+      console.log(res)
+      let tempArr = this.data.bookList
+      this.setData({
+        bookList: tempArr.concat(res.data)
+      })
+    })
+  },
+  onReachBottom () {
+    console.log('上拉加载')
+    let tempPage = this.data.page + 1
+    this.setData({
+      page: tempPage
+    })
+    console.log(this.data.page)
+    this.getBooksListFn()
+    
+    
+  },
 })

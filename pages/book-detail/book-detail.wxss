@@ -50,6 +50,10 @@
   color: rgba(74,74,74,1);
   line-height: 50rpx;
   margin-top: 20rpx;
+  max-width: 280rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
 }
 .home-book-desc {
   height: 34rpx;
@@ -69,7 +73,6 @@
 .chapter-content {
   padding: 20rpx 40rpx;
   width: 78%;
-  height: 800rpx;
   background: rgba(255,255,255,1);
   box-shadow: 0rpx 8rpx 16rpx 0rpx rgba(202,202,202,0.5);
   border-radius: 16rpx; 
