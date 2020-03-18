@@ -4,15 +4,19 @@
     <view>{{bookDetail.bookName}}</view>
   </view> -->
   <scroll-view scroll-y class="article-content">
-    <view class="" style="font-size:{{fontSize}}px;line-height:{{fontSize*2}}px;">{{text}}</view>
+    <view class="" style="font-size:{{fontSize}}px;line-height:{{fontSize*2}}px;">{{catalogcontent[currentPage].content}}</view>
     <view class="change-chapter flex">
-      <view class="last-chapter">上一章</view>
-      <view class="next-chapter">下一章</view>
+      <view class="last-chapter" bind:tap="beforeFn" data-page="{{currentPage}}">
+        {{currentPage <= 0 ? '上一章' : '上一页'}}
+      </view>
+      <view class="next-chapter" bind:tap="nextFn" data-page="{{currentPage}}">
+        {{currentPage >= catalogcontent.length - 1 ? '下一章' : '下一页'}}
+      </view>
     </view>
   </scroll-view>
   <view class="flex article-info  article-info-bottom">
-    <view>{{bookDetail.chapterName}}</view>
-    <view>{{bookDetail.progress + '/' +bookDetail.total}}</view>
+    <view>{{catalogData.name}}</view>
+    <view>{{(currentPage + 1) + '/' + catalogcontent.length}}</view>
   </view>
   <view  class="flex setting-font-size ">
     <view class="sub-fontsize" bind:tap="subFontSize">A-</view>

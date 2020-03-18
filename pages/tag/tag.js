@@ -19,7 +19,7 @@ Page({
       title: '书库'
     })
     wx.hideTabBar()
-    util.myAjax('http://192.168.0.102:7001/api/typeList', {} , 'POST', res => {
+    util.myAjax('/api/typeList', {} , 'POST', res => {
       let tempObj = res.data
       tempObj.map((v, i) => {
         v.selected = false
@@ -67,7 +67,7 @@ Page({
     })
   },
   getBooksListFn () {
-    util.myAjax('http://192.168.0.102:7001/api/booksList', {
+    util.myAjax('/api/booksList', {
       page: this.data.page,
       rows: this.data.rows,
       type: 1

@@ -1,15 +1,15 @@
 <view>
   <view class="flex home-content" bind:tap="toBook">
-    <view class="home-left-img" bindtap = "readFn">
-      <image style="width: 220rpx; height: 280rpx" src="{{detailData.imgUrl}}"></image>
+    <view class="home-left-img" bind:tap = "readFn" data-catalogItem="{{catalogList[0]}}">
+      <image style="width: 220rpx; height: 280rpx" src="{{bookDetail.imgUrl}}"></image>
     </view>
     <view class="home-right-view">
       <view class="updata-dot"></view>
-      <view class="home-book-title">{{detailData.name}}</view>
-      <view class="home-book-desc">{{detailData.author}}</view>
+      <view class="home-book-title">{{bookDetail.name}}</view>
+      <view class="home-book-desc">{{bookDetail.author}}</view>
       <view class="flex">
         <view class="home-book-size">''</view>
-        <view class="home-book-date">{{detailData.updateTime}}</view>
+        <view class="home-book-date">{{bookDetail.updateTime}}</view>
       </view>
       <progress class="progress"  stroke-width="4rpx"  border-radius="2px" percent="0" color="#84B1ED"  backgroundColor="#ffffff" />
     </view>
@@ -18,6 +18,13 @@
   </view>
   <view class="chapter-content">
     <view class="brief-introduction">书籍介绍</view>
-    <view>{{detailData.description}}</view>
+    <view>{{bookDetail.description}}</view>
+    <view class="brief-introduction">目录</view>
+    <view
+      wx:for="{{catalogList}}"
+      wx:key="index"
+      bind:tap="readFn"
+      data-catalogItem="{{item}}"
+    >{{item.name}}</view>
   </view>
 </view>

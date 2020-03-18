@@ -1,12 +1,14 @@
 //index.js
 //获取应用实例
 const app = getApp()
-
+var util = require('../../utils/util.js');
 Page({
   data: {
     homeFlag: false,
     tagFlag: false,
-    myFlag: true
+    myFlag: true,
+    list: [],
+    catalogCurrent: {}
   },
   onReady: function(options) {
     wx.setNavigationBarTitle({
@@ -14,11 +16,51 @@ Page({
     })
     wx.hideTabBar()
   },
-  toBook () {
-    wx.navigateTo({
-      url: '../viewPage/viewPage',
-      success: function (res) {
-      }
+  // onLoad () {
+    
+  // },
+  onShow () {
+    util.myAjax('/api/bookshelf/list', {} , 'POST', res => {
+      console.log(res)
+      this.setData({
+        list: res.data
+      })
     })
+    
+  },
+  toBook (e) {
+    let that = this
+    let bookdetail = e.currentTarget.dataset.bookdetail;
+    bookdetail.name = bookdetail.bookName
+    new Promise( (resolve, reject) => {
+      util.myAjax('/api/catalogListById', {bookId: bookdetail.bookId} , 'POST',  res => {
+        console.log('---res', res)
+        this.setData({
+          catalogCurrent: res.data[0]
+        })
+        resolve(res.data)
+      })
+    }).then((result) => {
+      console.log('====res', {result,  data: that.data.catalogCurrent, bookDetail: bookdetail })
+      wx.navigateTo({
+        url: '../viewPage/viewPage',
+        success: function (res) {
+          res.eventChannel.emit('catalogData', 
+          { data: {catalogitem: that.data.catalogCurrent}, bookDetail: bookdetail })
+        }
+      })
+      // console.log('====res', { data: that.data.catalogCurrent, bookDetail: bookdetail })
+    }).catch((reason) => {
+        console.log('失败：' + reason);
+    });
+    
+    
+    // wx.navigateTo({
+    //   url: '../viewPage/viewPage',
+    //   success: function (res) {
+    //     res.eventChannel.emit('catalogData', 
+    //     { data: that.data.catalogCurrent, bookDetail: bookdetail })
+    //   }
+    // })
   }
 })

@@ -47,6 +47,10 @@
   color: rgba(152,152,152,1);
   line-height: 34rpx;
   margin-top: 20rpx;
+  max-width: 80%;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
 }
 .home-book-size, .home-book-date {
   height: 34rpx;
@@ -83,3 +87,20 @@
 .sub-title-view {
   margin-right: 38rpx;
 }
+.no-shujia {
+  margin: 50% auto 0;
+  width: 88rpx;
+  height: 82rpx;
+  display: block;
+}
+.no-shujia-txt {
+  text-align: center;
+  font-size: 32rpx;
+  font-weight: 300;
+  margin-top: 48rpx;
+  color: rgba(74,74,74,1);
+}
+.book-list {
+  padding-left: 0;
+}
+  

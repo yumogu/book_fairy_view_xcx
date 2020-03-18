@@ -24,6 +24,7 @@ const formatNumber = n => {
  * fail 失败回调函数 
  */
 const myAjax = (url, data, method, success, fail, loading = true) => {
+  const host = 'http://192.168.0.103:7001'
   if (loading) {
     wx.showLoading({
       title: '正在加载中...',
@@ -31,7 +32,7 @@ const myAjax = (url, data, method, success, fail, loading = true) => {
   }
   let _this = this;
   wx.request({
-    url: url,
+    url: host + url,
     data: data,
     method: method || 'GET',
     header: {
@@ -68,6 +69,7 @@ const myAjax = (url, data, method, success, fail, loading = true) => {
     }
   })
 }
+
 
 module.exports = {
   formatTime: formatTime,
