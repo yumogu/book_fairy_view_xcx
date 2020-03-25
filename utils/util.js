@@ -24,7 +24,7 @@ const formatNumber = n => {
  * fail 失败回调函数 
  */
 const myAjax = (url, data, method, success, fail, loading = true) => {
-  const host = 'http://192.168.0.103:7001'
+  const host = 'http://192.168.43.166:7001'
   if (loading) {
     wx.showLoading({
       title: '正在加载中...',

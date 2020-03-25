@@ -22,7 +22,7 @@
     color: transparent;
 }
 .book-type-tag-item {
-  width: 120rpx;
+  width: 125rpx;
   height: 48rpx;
   text-align: center;
   line-height: 48rpx;

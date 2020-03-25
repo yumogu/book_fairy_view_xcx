@@ -9,7 +9,7 @@ Page({
     myFlag: true,
     page: 1,
     rows: 10,
-    type: 1,
+    type: [],
     bookList: [
     ],
     typeList: []
@@ -39,6 +39,12 @@ Page({
         [string]: !this.data.typeList[e.target.dataset.index].selected
     })
     let detailValue = this.data.typeList.filter(it => it.selected).map(it => it.typeStr)
+    this.setData({
+      page: 1,
+      type: detailValue
+    })
+    this.getBooksListFn()
+    console.log(detailValue, this.data.type)
   },
   goFn: function (e) {
     console.log(e.currentTarget)
@@ -70,13 +76,18 @@ Page({
     util.myAjax('/api/booksList', {
       page: this.data.page,
       rows: this.data.rows,
-      type: 1
+      type: this.data.type
     } , 'POST', res => {
-      console.log(res)
       let tempArr = this.data.bookList
-      this.setData({
-        bookList: tempArr.concat(res.data)
-      })
+      if (this.data.page === 1) {
+        this.setData({
+          bookList: res.data.rows
+        })
+      } else {
+        this.setData({
+          bookList: tempArr.concat(res.data.rows)
+        })
+      }
     })
   },
   onReachBottom () {
@@ -87,7 +98,5 @@ Page({
     })
     console.log(this.data.page)
     this.getBooksListFn()
-    
-    
   },
 })

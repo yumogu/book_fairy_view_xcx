@@ -1,19 +1,23 @@
 <!-- tag.wxml -->
 <view>
-  <mp-searchbar></mp-searchbar>
-  <view class="search-result">已为您查找到200条搜索结果</view>
-  <scroll-view class="flex book-list" scroll-y style="height: 430px;" bindscrolltoupper="upper" bindscrolltolower="lower"  enable-flex="true">
+  <mp-searchbar search="{{search}}"></mp-searchbar>
+  <view class="search-result">已为您查找到{{count}}条搜索结果</view>
+  <scroll-view
+    class="flex book-list" 
+    scroll-y style="padding-bottom: 100rpx; padding-top: 50rpx;"
+    enable-flex="true">
     <view 
       wx:for="{{bookList}}" 
       wx:for-index="idx" 
       wx:for-item="item" 
       wx:key="idx" 
+      data-item="{{item}}"
       class="book-list-item" 
       bind:tap="goFn">
       <view class="book-list-item-view">
-        <image class="book-list-item-view-image" style="width: 90px; height: 115px;" src="{{item.bookImgUrl}}" />
+        <image class="book-list-item-view-image" style="width: 90px; height: 115px;" src="{{item.imgUrl}}" />
       </view>
-      <view class="book-list-item-text">{{item.bookName}}</view>
+      <view class="book-list-item-text">{{item.name}}</view>
     </view>
   </scroll-view>
 </view>

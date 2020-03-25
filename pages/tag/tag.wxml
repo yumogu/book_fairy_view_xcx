@@ -16,7 +16,7 @@
       <image src="../../images/tag-search.png" style="width: 40rpx; height: 40rpx;"></image>
     </view>
   </view>
-  <scroll-view 
+  <scroll-view
     class="flex book-list" 
     scroll-y style="padding-bottom: 100rpx; padding-top: 100rpx;"
     enable-flex="true">

@@ -60,4 +60,7 @@
   color: rgba(74,74,74,1);
   padding: 20rpx 0 0 42rpx;
 }
+scroll-view {
+  width: auto;
+}
 

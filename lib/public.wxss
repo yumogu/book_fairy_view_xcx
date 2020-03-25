@@ -54,7 +54,7 @@
   flex-wrap: wrap;
 }
 .book-list {
-  padding-left: 45rpx;
+  padding-left: 40rpx;
 }
 .book-list-item {
   font-size: 24rpx;

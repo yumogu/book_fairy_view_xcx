@@ -9,7 +9,10 @@
     "pages/my/my",
     "pages/tag/tag",
     "pages/book-detail/book-detail",
-    "pages/search/search"
+    "pages/search/search",
+    "pages/entry/entry",
+    "pages/index/index",
+    "pages/logs/logs"
   ],
   "window": {
     "backgroundTextStyle": "light",
