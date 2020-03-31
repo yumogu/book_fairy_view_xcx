@@ -20,7 +20,10 @@ Page({
     
   // },
   onShow () {
-    util.myAjax('/api/bookshelf/list', {} , 'POST', res => {
+    let userId = wx.getStorageSync('mysqlUserInfo') ? wx.getStorageSync('mysqlUserInfo').id : null
+    console.log('mysqlUserInfo',  wx.getStorageSync('mysqlUserInfo'))
+
+    util.myAjax('/api/bookshelf/list', {userId} , 'POST', res => {
       console.log(res)
       this.setData({
         list: res.data
@@ -33,7 +36,7 @@ Page({
     let bookdetail = e.currentTarget.dataset.bookdetail;
     bookdetail.name = bookdetail.bookName
     new Promise( (resolve, reject) => {
-      util.myAjax('/api/catalogListById', {bookId: bookdetail.bookId} , 'POST',  res => {
+      util.myAjax('/api/catalogListById', {bookId: bookdetail.bookId, id: bookdetail.catalogId} , 'POST',  res => {
         console.log('---res', res)
         this.setData({
           catalogCurrent: res.data[0]
@@ -46,21 +49,12 @@ Page({
         url: '../viewPage/viewPage',
         success: function (res) {
           res.eventChannel.emit('catalogData', 
-          { data: {catalogitem: that.data.catalogCurrent}, bookDetail: bookdetail })
+          { data: {catalogitem: that.data.catalogCurrent}, bookDetail: bookdetail  })
         }
       })
       // console.log('====res', { data: that.data.catalogCurrent, bookDetail: bookdetail })
     }).catch((reason) => {
         console.log('失败：' + reason);
     });
-    
-    
-    // wx.navigateTo({
-    //   url: '../viewPage/viewPage',
-    //   success: function (res) {
-    //     res.eventChannel.emit('catalogData', 
-    //     { data: that.data.catalogCurrent, bookDetail: bookdetail })
-    //   }
-    // })
   }
 })

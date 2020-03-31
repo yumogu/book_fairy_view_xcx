@@ -41,6 +41,7 @@ Page({
       })
     })
   },
+  // 加入书架
   addsrcFn (e) {
     if (this.data.addsrc.indexOf('has') > -1) {
       wx.showToast({
@@ -51,9 +52,9 @@ Page({
       return false
     } 
     let params = this.data.bookDetail
-    params.catalogId = 1
-    params.userId = 1
-    console.log(params)
+    params.catalogId = this.data.catalogList[0].id
+    params.catalogName = this.data.catalogList[0].name
+    params.userId = wx.getStorageSync('mysqlUserInfo') ? wx.getStorageSync('mysqlUserInfo').id : null
     util.myAjax('/api/bookshelf/add', params , 'POST', res => {
       if ( res.resultCode === 1) {
         

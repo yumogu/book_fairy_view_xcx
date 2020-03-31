@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "book-banner": "../components/bookBanner/bookBanner"
+    "book-banner": "../components/bookBanner/bookBanner",
+    "left-menu": "../components/leftMenu/leftMenu"
   }
 }

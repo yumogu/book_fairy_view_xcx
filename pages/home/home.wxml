@@ -15,7 +15,7 @@
         <view class="home-book-desc">{{item.description}}</view>
         <view class="flex">
           <view class="home-book-size">{{item.author}}</view>
-          <view class="home-book-date">{{item.updataTime}}</view>
+          <view class="home-book-date">{{item.catalogName}}</view>
         </view>
         <progress class="progress"  stroke-width="4rpx"  border-radius="2px" percent="0" color="#84B1ED"  backgroundColor="#ffffff" />
       </view>
@@ -23,7 +23,7 @@
   </view>
   <view wx:else>
     <image class="no-shujia" src="../../images/shujia.png"></image>
-    <view class="no-shujia-txt">当前书架暂无书籍{{list.length === 0}}</view>
+    <view class="no-shujia-txt">当前书架暂无书籍</view>
   </view>
 </view>
 <tab-bar homeFlag="{{true}}"></tab-bar>

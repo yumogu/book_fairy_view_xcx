@@ -1,0 +1,46 @@
+.slide-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #000000;
+  opacity: 0.5; 
+  z-index: 10;
+}
+.slide-menu {
+  background: #ffffff;
+  position: absolute;
+  top: 0;
+  // left: -224rpx;
+  z-index: 100;
+  overflow: auto;
+  // padding: 30rpx
+}
+.catalog-item {
+  height: 40rpx;
+  font-size: 28rpx;
+  font-weight: 300;
+  color: rgba(74,74,74,1);
+  line-height: 40rpx;
+  padding: 0 30rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  
+  
+}
+.catalog-item + .catalog-item {
+  margin-top: 40rpx;
+}
+.catalog-item:first-child {
+  // height: 70rpx;
+  padding-top: 40rpx;
+}
+.catalog-item:last-child {
+  // height: 70rpx;
+  padding-bottom: 40rpx;
+}
+.selected {
+  color: #84B1ED;
+}

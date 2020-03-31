@@ -50,13 +50,16 @@ Page({
         userInfo: e.detail.userInfo,
         hasUserInfo: true
       })
+      util.myAjax('/api/user', {userInfo: e.detail.userInfo} , 'POST', res => {
+        console.log('/api/user', res)
+        wx.setStorage({
+          key: "mysqlUserInfo",
+          data: res.data
+        })
+      })
     }
   },
   goFn: function (e) {
-    // util.myAjax('http://127.0.0.1:7001/api/user', {userInfo: this.data.userInfo} , 'POST', res => {
-    //   console.log(res)
-    // })
-    // console.log('goFn', e.currentTarget.dataset.url)
     if (app.globalData.userInfo || e.currentTarget.dataset.url.indexOf('/about/about') > -1) {
       wx.navigateTo({
         url: e.currentTarget.dataset.url

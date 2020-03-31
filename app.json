@@ -1,13 +1,13 @@
 {
   "pages": [
     
+    "pages/tag/tag",
     "pages/home/home",
     "pages/viewPage/viewPage",
     "pages/my/detail/detail",
     "pages/my/about/about",
     "pages/my/record/record",
     "pages/my/my",
-    "pages/tag/tag",
     "pages/book-detail/book-detail",
     "pages/search/search",
     "pages/entry/entry",

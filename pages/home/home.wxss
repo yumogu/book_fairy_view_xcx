@@ -59,6 +59,12 @@
   color: rgba(74,74,74,1);
   line-height: 34rpx;
 }
+.home-book-date {
+  max-width: 59%;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
 .updata-dot {
   position: absolute;
   top: 22rpx;

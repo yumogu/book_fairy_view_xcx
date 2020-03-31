@@ -3,11 +3,18 @@
   <!-- <view class="flex article-info">
     <view>{{bookDetail.bookName}}</view>
   </view> -->
+  <left-menu items="{{catalogList}}" id="slideUp" catalogData="{{catalogData}}" bind:slideCloseEvent="onslideCloseEvent"></left-menu>
   <scroll-view scroll-y class="article-content">
     <view class="" style="font-size:{{fontSize}}px;line-height:{{fontSize*2}}px;">{{catalogcontent[currentPage].content}}</view>
     <view class="change-chapter flex">
       <view class="last-chapter" bind:tap="beforeFn" data-page="{{currentPage}}">
         {{currentPage <= 0 ? '上一章' : '上一页'}}
+      </view>
+      <view class="last-chapter" bind:tap="slideUpFn">
+        目录
+      </view>
+      <view class="last-chapter" bind:tap="addTag">
+        加入书架
       </view>
       <view class="next-chapter" bind:tap="nextFn" data-page="{{currentPage}}">
         {{currentPage >= catalogcontent.length - 1 ? '下一章' : '下一页'}}

@@ -1,0 +1,13 @@
+<view class="slide-mask" style="display:{{maskDisplay || 'none'}}" bindtap="slideDown"></view>
+<view class="slide-menu" style="right: {{slideRight}}px;width: {{slideWidth}}px;height:{{slideHeight}}px;" animation="{{slideAnimation}}">
+  <!-- <icon type="cancel" size="30" class="close-btn" color="#FFF"  /> -->
+  <scroll-view scroll-y="true" style="height:100%;width:100% padding-bottom: 50rpx">
+    <view class="catalog-item {{item.id === catalogData.id ? 'selected' : ''}}" 
+      wx:for="{{items}}" 
+      wx:key="{{index}}"
+      data-catalogData="{{item}}"
+      bindtap="slideCloseEvent"
+    >{{item.name}}</view>
+  </scroll-view>
+  <!-- <view>1111</view> -->
+</view>

@@ -36,10 +36,18 @@ const myAjax = (url, data, method, success, fail, loading = true) => {
     data: data,
     method: method || 'GET',
     header: {
+      userId: wx.getStorageSync('mysqlUserInfo') ? wx.getStorageSync('mysqlUserInfo').id : '',
       'Authorization': 'Bearer ' + (wx.getStorageSync('token') || '')
     },
     success: (res) => {
       if (res.statusCode == 200) {
+        if (res.data.resultCode === 0 && res.data.errorCode === 'login-error') {
+          wx.showToast({
+            title: '请登录',
+            icon: 'none',
+            duration: 2000
+          })
+        }
         if (typeof success == 'function') {
           success(res.data);
         }

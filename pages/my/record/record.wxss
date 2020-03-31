@@ -59,3 +59,8 @@
   margin-bottom: 20rpx;
   margin-left: 38rpx;
 }
+.tips {
+  font-size: 24rpx;
+  color: rgba(74,74,74,1);
+  font-weight: 400;
+}
